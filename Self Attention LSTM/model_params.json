@@ -1,0 +1,9 @@
+{
+
+	"batch_size":1,
+	"vocab_size":20000,
+	"timesteps":300,
+	"lstm_hidden_dimension":50,
+	"d_a":100
+
+}

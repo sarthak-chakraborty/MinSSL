@@ -1,0 +1,189 @@
+Using TensorFlow backend.
+/home/lovish/EDA_Proj/Project/Self-Attention/Structured-Self-Attention/attention/model.py:91: UserWarning: Implicit dimension choice for softmax has been deprecated. Change the call to include dim=X as an argument.
+  soft_max_2d = F.softmax(input_2d)
+/home/lovish/EDA_Proj/Project/Self-Attention/Structured-Self-Attention/attention/model.py:115: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+  return F.log_softmax(self.linear_final(avg_sentence_embeddings)),attention
+Using settings: {'C': 0.03, 'use_embeddings': False, 'clip': True, 'epochs': 30, 'use_regularization': True, 'attention_hops': 10}
+Using model settings {'vocab_size': 20000, 'timesteps': 300, 'lstm_hidden_dimension': 50, 'd_a': 100, 'batch_size': 512}
+Running EPOCH 1
+avg_loss is 
+ 2.5476
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.3615579044117647
+Running EPOCH 2
+avg_loss is 
+ 1.3995
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.6849724264705882
+Running EPOCH 3
+avg_loss is 
+ 0.9885
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.7852711397058824
+Running EPOCH 4
+avg_loss is 
+ 0.7641
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.8412224264705882
+Running EPOCH 5
+avg_loss is 
+ 0.6125
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.8779871323529411
+Running EPOCH 6
+avg_loss is 
+ 0.4956
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9032628676470589
+Running EPOCH 7
+avg_loss is 
+ 0.4125
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9263556985294118
+Running EPOCH 8
+avg_loss is 
+ 0.3536
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9361213235294118
+Running EPOCH 9
+avg_loss is 
+ 0.3134
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9425551470588235
+Running EPOCH 10
+avg_loss is 
+ 0.2791
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9488740808823529
+Running EPOCH 11
+avg_loss is 
+ 0.2548
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9512867647058824
+Running EPOCH 12
+avg_loss is 
+ 0.2408
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9526654411764706
+Running EPOCH 13
+avg_loss is 
+ 0.2285
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9517463235294118
+Running EPOCH 14
+avg_loss is 
+ 0.2174
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9530101102941176
+Running EPOCH 15
+avg_loss is 
+ 0.2084
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9533547794117647
+Running EPOCH 16
+avg_loss is 
+ 0.2004
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9551930147058824
+Running EPOCH 17
+avg_loss is 
+ 0.1940
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9553079044117647
+Running EPOCH 18
+avg_loss is 
+ 0.1915
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9533547794117647
+Running EPOCH 19
+avg_loss is 
+ 0.1934
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9556525735294118
+Running EPOCH 20
+avg_loss is 
+ 0.1889
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9541590073529411
+Running EPOCH 21
+avg_loss is 
+ 0.1828
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9569163602941176
+Running EPOCH 22
+avg_loss is 
+ 0.1809
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9574908088235294
+Running EPOCH 23
+avg_loss is 
+ 0.1829
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9551930147058824
+Running EPOCH 24
+avg_loss is 
+ 0.1800
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9574908088235294
+Running EPOCH 25
+avg_loss is 
+ 0.1771
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9559972426470589
+Running EPOCH 26
+avg_loss is 
+ 0.1733
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9565716911764706
+Running EPOCH 27
+avg_loss is 
+ 0.1672
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.95703125
+Running EPOCH 28
+avg_loss is 
+ 0.1637
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.95703125
+Running EPOCH 29
+avg_loss is 
+ 0.1620
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.95703125
+Running EPOCH 30
+avg_loss is 
+ 0.1583
+[torch.FloatTensor of size 1]
+
+Accuracy of the model 0.9582950367647058
+Attention visualization created for 2246 samples
+Attention visualization created for 8982 samples
