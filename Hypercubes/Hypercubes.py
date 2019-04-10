@@ -2,8 +2,26 @@ from sklearn import tree
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 import numpy as np
-
+from sklearn.tree import export_graphviz
+import graphviz
+import pandas as pd 
 dim = 13
+
+
+
+df_train = pd.read_csv("train.csv")
+df_train_label = pd.read_csv("train_label.csv")
+df_test = pd.read_csv("test.csv")
+df_test_label = pd.read_csv("test_label.csv")
+
+print(len(list(df_train_label)))
+print(df_test)
+
+
+
+
+
+
 Data = datasets.load_wine()
 X = Data.data
 y = Data.target
@@ -11,13 +29,15 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
 
 estimator = tree.DecisionTreeClassifier(random_state=0)
 estimator.fit(X_train, y_train)
-
+p=export_graphviz(estimator,out_file=None,class_names=[str(x) for x in set(y_train)])
+graph=graphviz.Source(p)
+graph.render("Entropy");
 predict = estimator.predict(X_test)
 count = 0
 for i in range(len(predict)):
     if(predict[i]==y_test[i]):
         count+=1
-print("Test Accuracy: " +str(count/len(predict)))
+print("Test Accuracy: " +str(float(count)/len(predict)))
 
 
 def_hcube = np.array([[np.min(X_train[:,i]),np.max(X_train[:,i])] for i in range(len(X[0]))])
