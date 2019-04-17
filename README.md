@@ -18,10 +18,24 @@ The main objective to use a self attention based recurrent neural network is to 
  
 ### Topology Adaptive Hyper-cubes
   Initial implementation uses a Decision Tree based classification algorithm to classify the semantic vectors into various categories. Hyper-cubes are then generated for various features (here, 300) that covers the vector space.  
-  `Hypercubes` contains the code for the implementation of the same. Run the code in a `python2` environment using `python Hypercubes.py`. Then run `python clean.py` and the results are stored in 'HyperCool.csv'.  
+  `Hypercubes` contains the code for the implementation of the same. Run the code in a `python2` environment using `python Hypercubes.py`; the output is saved in `out.txt` in text format. Run `python clean.py` to generate the results in 'csv' format; results are stored in 'HyperCool.csv'. Number of hyper-cubes generated are 1173.
   **Hyperparameters**:
   * Depth of Decision Tree = 15
   
   
   ### Determinantal Point Process
-  
+  Determinantal Point Process chooses a set of diverse hypercubes from the ones obtained in the previous section. It takes the input csv and algorithmically chooses the set of hypercubes that maximises the principal minor(Read [Determinantal point processes for machine learning](https://arxiv.org/pdf/1207.6083.pdf) for more information). Code for this section is present in the `Hypercubes` folder. Results of the hypercubes are stored in `index_dpp_hypercubes.npy`. Algorithm chooses 150 diverse hypercubes from the set. (P.S. Algorithm needs to be feeded with the number of hypercubes it needs to be chosen).  
+  **Hyperparameters**
+  * Number of hypercubes to be chosen = 150
+  * Weight(`FACTOR`) gien to hypercubes of different categories = 50
+  * Similarity metric between two hypercubes = Inverse Euclidean Distance  
+ 
+ 
+ ## Minimized Semi-Supervise Learning
+ To extract the representative samples present in the selected hypercubes, run `python extractPoints.py` in `extractPoints` folder. Labelled data points are stored in `train1.csv` and their labels in `train1labels.csv`. Unlabelled data points are stored in `otherpoints.csv`. Number of representative points for 150 hypercubes are 924. Hence there are 924 labelled datapoints and 8058 unlabelled datapoints.   
+ Run a semi-supervised learning algorithm on the obtained data points using `python ssl.py` within `SSL` folder. Train accuracy and Test accuracy are reported.  
+ **Hyperparameters**
+ * Batch size for Unsupervised learning = 100
+ 
+ 
+ Read `MinSSL.pdf` for a better understanding.  
