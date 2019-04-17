@@ -9,7 +9,7 @@ a = a.reset_index(drop=True)
 b = pd.DataFrame(data=[[0.0]*(dim+2) for i in range(int(len(a)/dim))])
 
 for i in range(len(a)):
-	# print(str(i) , end='\r')
+	print(str(i) , end='\r')
 	row = int(i/dim);
 	column = int(i%dim)
 	if(column is 0):

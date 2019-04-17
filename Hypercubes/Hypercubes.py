@@ -5,8 +5,6 @@ import numpy as np
 from sklearn.tree import export_graphviz
 import graphviz
 import pandas as pd 
-dim = 13
-
 
 
 df_train = pd.read_csv("train.csv", header=None)
@@ -44,7 +42,7 @@ y_test = list(df_test_label.iloc[0])
 # print(X_train)
 # print(y_train)
 
-estimator = tree.DecisionTreeClassifier(random_state=0, max_depth=50)
+estimator = tree.DecisionTreeClassifier(random_state=0, max_depth=15)
 estimator.fit(X_train, y_train)
 p=export_graphviz(estimator,out_file=None,class_names=[str(x) for x in set(y_train)])
 graph=graphviz.Source(p)

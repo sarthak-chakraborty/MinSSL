@@ -1,0 +1,18 @@
+hypercubes = pd.read_csv("HyperCool.csv", index_col = 0,header=0)
+for i in range(len(hypercubes)):
+	for j in range():
+		hypercubes.iloc[i, j] = eval(hypercubes.iloc[i, j])
+hypercubes_mean = hypercubes.copy()
+for i in range(len(hypercubes)):
+	for j in range(dim):
+		hypercubes_mean.iloc[i, j] = np.mean(hypercubes.iloc[i, j])
+print("Preprocessing done")
+K =np.array([[0.1]*len(hypercubes) for i in range(len(hypercubes))])
+
+def distance(i,j):
+	su = 0
+	for ite in range(dim):
+		su+= (hypercubes_mean.iloc[i, ite]-hypercubes_mean.iloc[j, ite])**2
+	if(int(hypercubes.iloc[i,dim])!=int(hypercubes.iloc[j,dim])):
+		return np.sqrt(su)/FACTOR
+	return np.sqrt(su)

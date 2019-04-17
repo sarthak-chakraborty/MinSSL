@@ -46,10 +46,10 @@ def visualize_attention(wts,x_test_pad,word_to_id,filename,filename2):
     wts_add_list = wts_add_np.tolist()
     print("len is " + str(len(wts_add_list)))
     ####################
-    # with open(filename2, "w") as f:
-	   #  for i in wts_add_list:
-	   #  	wr = csv.writer(f, dialect='excel')
-	   #  	wr.writerow(i)
+    with open(filename2, "w") as f:
+	    for i in wts_add_list:
+	    	wr = csv.writer(f, dialect='excel')
+	    	wr.writerow(i)
     ####################
     id_to_word = {v:k for k,v in word_to_id.items()}
     text= []
@@ -108,8 +108,8 @@ if classification_type == 'multiclass':
 if classified:
     test_last_idx = 100
     wts_test = get_activation_wts(attention_model,Variable(torch.from_numpy(x_test_pad[:]).type(torch.LongTensor)))
-    # wts_train = get_activation_wts(attention_model,Variable(torch.from_numpy(x_train_pad[:]).type(torch.LongTensor)))
+    wts_train = get_activation_wts(attention_model,Variable(torch.from_numpy(x_train_pad[:]).type(torch.LongTensor)))
     # print(wts.size())
     visualize_attention(wts_test,x_test_pad[:],word_to_id,filename='attention_test.html',filename2='test.csv')
-    # visualize_attention(wts_train,x_train_pad[:],word_to_id,filename='attention_train.html', filename2 ='train.csv')
+    visualize_attention(wts_train,x_train_pad[:],word_to_id,filename='attention_train.html', filename2 ='train.csv')
 
