@@ -11,6 +11,7 @@ Minimally Supervised Semi-Supervised Learning
  ### Self-Attention based RNN
 The main objective to use a self attention based recurrent neural network is to transform a natural language sentence to a semantic vector that can represent the embedding of the sentence. The work in this project is based on the paper "[A Structured Self-Attentive Sentence Embedding](https://arxiv.org/abs/1703.03130)", which was published in ICLR 2017.  
  `Self Attention LSTM` contains the code for the implementation of the same. To run the code, use a `python3` environment and have the necessary libraries used in the code downloaded. Run using `python classification.py` and the embedding obtained for the train and test data are stored in the corresponding folder in a 'csv' format. (P.S. Refer to [Structured-Self-Attention](https://github.com/kaushalshetty/Structured-Self-Attention) for more details regarding the implementations.  
+ ![Self Attention based LSTM for Semantic Vector](https://user-images.githubusercontent.com/166852/33136258-ccc5bc08-cf72-11e7-8ddd-368e4a85a0a8.png)
  **Hyperparameters**:  
  * Length of semantic vector = 300
  * Number of epochs = 30  
