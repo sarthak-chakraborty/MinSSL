@@ -20,14 +20,14 @@ The main objective to use a self attention based recurrent neural network is to 
 ### Topology Adaptive Hyper-cubes
   Initial implementation uses a Decision Tree based classification algorithm to classify the semantic vectors into various categories. Hyper-cubes are then generated for various features (here, 300) that covers the vector space.  
   `Hypercubes` contains the code for the implementation of the same. Run the code in a `python2` environment using `python Hypercubes.py`; the output is saved in `out.txt` in text format. Run `python clean.py` to generate the results in 'csv' format; results are stored in 'HyperCool.csv'. Number of hyper-cubes generated are 1173.  
-![Hypercubes](https://user-images.githubusercontent.com/23696812/56296144-8eef4e00-614b-11e9-80ce-7fbecc150437.png)
+![Hypercubes](https://user-images.githubusercontent.com/23696812/56296144-8eef4e00-614b-11e9-80ce-7fbecc150437.png)  
   **Hyperparameters**:
   * Depth of Decision Tree = 15
   
   
   ### Determinantal Point Process
   Determinantal Point Process chooses a set of diverse hypercubes from the ones obtained in the previous section. It takes the input csv and algorithmically chooses the set of hypercubes that maximises the principal minor(Read [Determinantal point processes for machine learning](https://arxiv.org/pdf/1207.6083.pdf) for more information). Code for this section is present in the `Hypercubes` folder. Results of the hypercubes are stored in `index_dpp_hypercubes.npy`. Algorithm chooses 150 diverse hypercubes from the set. (P.S. Algorithm needs to be feeded with the number of hypercubes it needs to be chosen).  
-  ![DPP](https://user-images.githubusercontent.com/23696812/56296142-8dbe2100-614b-11e9-9eb0-05a02a9c4299.png)
+  ![DPP](https://user-images.githubusercontent.com/23696812/56296142-8dbe2100-614b-11e9-9eb0-05a02a9c4299.png)  
   **Hyperparameters**
   * Number of hypercubes to be chosen = 150
   * Weight(`FACTOR`) gien to hypercubes of different categories = 50
