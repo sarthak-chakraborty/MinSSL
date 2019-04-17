@@ -7,6 +7,7 @@ import graphviz
 import pandas as pd 
 import xgboost as xgb
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 
 
 df_train = pd.read_csv("train.csv", header=None)
@@ -31,6 +32,12 @@ for i in range(len(df_test)):
 y_test = list(df_test_label.iloc[0])
 
 
+X = X_train + X_test
+Y = y_train + y_test
+
+X_train, X_test, y_train, y_test = train_test_split(X, Y, train_size=0.7)
+
+
 data_dmatrix = xgb.DMatrix(data=X_train,label=y_train)
 
 model = xgb.XGBClassifier(max_depth=50, objective='reg:logistic')
@@ -52,6 +59,6 @@ print("Test Accuracy: " +str(float(count)/len(predict)))
 
 xgb.plot_tree(model,num_trees=0)
 plt.figure()
-plt.savefig("Tree_xg.png")
+plt.savefig("Tree_xg_100.png")
 
 # xg_reg = xgb.train(params=params, dtrain=data_dmatrix, num_boost_round=10)

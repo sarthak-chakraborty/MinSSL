@@ -1,0 +1,6 @@
+/home/lovish/anaconda2/lib/python2.7/site-packages/sklearn/model_selection/_split.py:2179: FutureWarning: From version 0.21, test_size will always complement train_size unless both are specified.
+  FutureWarning)
+Train Accuracy: 0.972642829877
+Test Accuracy: 0.578509943603
+qt.qpa.screen: QXcbConnection: Could not connect to display localhost:10.0
+Could not connect to any X display.
