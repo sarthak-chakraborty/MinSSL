@@ -41,4 +41,8 @@ The main objective to use a self attention based recurrent neural network is to 
  * Batch size for Unsupervised learning = 100
  
  
+<<<<<<< HEAD
  Read `MinSSL.pdf` for a better understanding. 
+=======
+ Read `MinSSL.pdf` for a better understanding.  
+>>>>>>> 05bb4b177e8e41b77f7f3d046548e43a4d612cdf
